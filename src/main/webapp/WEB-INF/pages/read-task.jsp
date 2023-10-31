@@ -5,14 +5,27 @@
     <title>Read existing Task</title>
 
     <style>
-        <%@include file="../styles/main.css"%>
+        body{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: space-around;
+            align-items: center;
+        }
+        td{
+            color: #020285;
+        }
+        .edit__header{
+            color: #020285;
+        }
     </style>
 
 </head>
 <body>
 
     <%@include file="header.html"%>
-        <h1>Read existing Task </h1>
+        <h1 class="edit__header">Read existing Task </h1>
     <%
         Task task = (Task)request.getAttribute("task");
     %>

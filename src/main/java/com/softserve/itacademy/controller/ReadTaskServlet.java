@@ -28,12 +28,13 @@ public class ReadTaskServlet extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/pages/error.jsp").forward(request, response);
             return;
         }
-
-
         Task task = taskRepository.read(id);
         request.setAttribute("task", task);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/WEB-INF/pages/read-task.jsp");
         requestDispatcher.forward(request, response);
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+
     }
 
 
